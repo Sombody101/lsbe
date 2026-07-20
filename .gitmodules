@@ -1,0 +1,3 @@
+[submodule "deps/rgecko"]
+	path = deps/rgecko
+	url = https://github.com/Sombody101/rgecko.git

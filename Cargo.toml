@@ -1,0 +1,12 @@
+[package]
+name = "lsbe"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bash-builtins = "0.4.1"
+rgecko = { path = "./deps/rgecko" }
+
+[lib]
+crate-type = ["cdylib"]
+
