@@ -14,6 +14,8 @@ jobs:
       
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       
       - uses: Sombody101/global-build/.github/actions/global-build@main
         with:
