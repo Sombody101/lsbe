@@ -17,12 +17,12 @@ jobs:
       
       - uses: Sombody101/global-build/.github/actions/global-build@main
         with:
-          bin_name: 'rgecko'
+          bin_name: 'lsbe'
           
       - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
         with:
           tag_name: ${{ github.ref_name }}
-          files: rgecko-*
+          files: lsbe-*
 
