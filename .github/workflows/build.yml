@@ -20,6 +20,7 @@ jobs:
       - uses: Sombody101/global-build/.github/actions/global-build@main
         with:
           bin_name: 'lsbe'
+          exclude_targets: "windows"
           
       - name: Release
         uses: softprops/action-gh-release@v2
