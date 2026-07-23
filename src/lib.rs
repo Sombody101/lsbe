@@ -1,4 +1,4 @@
-use bash_builtins::{Args, Builtin, BuiltinOptions, Error, Result, builtin_metadata};
+use bash_builtins::{Args, Builtin, Error, Result, builtin_metadata};
 
 builtin_metadata!(name = "gecho", create = RGeckoBuiltin::new);
 
@@ -21,10 +21,10 @@ impl Builtin for RGeckoBuiltin {
             }
         };
 
-        rgecko::markup(&argv, &mut stdout);
+        rgecko::markup_write(&argv, &mut stdout);
 
         args.finished()?;
-        
+
         Ok(())
     }
 }
